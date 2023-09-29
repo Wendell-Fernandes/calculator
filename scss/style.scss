@@ -1,0 +1,96 @@
+@import "./mixin";
+
+body{
+    @include display(flex, center, center, null, null);
+    @include size(100vw, 100vh);
+
+    background: #d6b10e;
+}
+
+.calculator{
+    @include size(350px, 530px);
+    @include border(null, 15px, null, null, null, null);
+
+    -webkit-box-shadow: 
+    5px 5px 0px 0px #a1a1a3, 
+    10px 10px 0px 0px #a1a1a3, 
+    15px 15px 0px 0px #a1a1a3, 
+    20px 20px 0px 0px #a1a1a3;
+
+    box-shadow: 
+    5px 5px 0px 0px #a1a1a3, 
+    10px 10px 0px 0px #a1a1a3, 
+    15px 15px 0px 0px #a1a1a3, 
+    20px 20px 0px 0px #a1a1a3;
+    
+    &__screen{
+        @include display(flex, center, center, null, null);
+        @include size(100%, 33%);
+        @include border(null, null, 15px, 15px, null, null);
+        display: grid;
+
+        background: #24252a;
+
+        & .screen{
+            @include display(flex, center, center, column, null);
+            @include size(300px, 100px);
+            @include alignment(20px 0 0 0, null);
+
+            background: rgb(54,59,65);
+            background: linear-gradient(135deg, rgba(54,59,65,1) 50%, rgba(52,57,63,1) 50%);
+            text-align: right;
+
+            #secondary-screen{
+                @include display(flex, flex-end, center, null, null);
+                @include size(95%, 30px);
+                @include font(null, 25px, 400, gray, null);
+
+                overflow: hidden;
+            }
+    
+            #primary-screen{
+                @include display(flex, flex-end, center, null, null);
+                @include size(95%, 50px);
+                @include font(null, 35px, 400, white, null);
+
+                overflow: hidden;
+            }
+        }
+    }
+
+    &__buttons{
+        @include display(flex, center, center, column, null);
+        @include size(100%, 67%);
+        @include border(null, null, null, null, 15px, 15px);
+
+        background-color: #c3c1c4;
+
+        & button{
+            @include size(65px, 60px);
+            @include alignment(4px 5px, null);
+            @include border(none, 10px, null, null, null, null);
+            @include font(null, 25px, 400, white, null);
+
+            cursor: pointer;
+            box-shadow: 2px 2px 0px 1px #6b6b6b;
+            background: #a1a1a3;
+
+            &:active{
+                box-shadow: 0 0 0 0 #6b6b6b, inset 3px 3px 0 #6b6b6b;
+                transform: translate(5px, 5px)
+            }
+        }
+
+        & .operators{
+            background: #24272c;
+        }
+
+        & .equal{
+            background: #8f1a20;
+        }
+
+        & .zero{
+            @include size(145px, 60px);
+        }
+    }
+}
