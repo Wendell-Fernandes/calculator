@@ -12,6 +12,7 @@ function showOnScreen(char){
 
 function makeCount(op){
     let valuePs = +ps.innerHTML;
+    let valueSs = +ss.innerHTML;
 
     if(cache == undefined){
         cache = valuePs;
@@ -31,10 +32,21 @@ function updateScreen(op){
 }
 
 function showResult(){
+    let valuePs = +ps.innerHTML;
+    let valueSs = +ss.innerHTML;
+    if(valuePs !== "" && valueSs == ""){
+        return;
+    }
     const op = ss.innerHTML.split(" ")[1];
     checkOperator(op)
     ss.innerHTML = ""
-    ps.innerHTML = cache;
+    if(cache % 1 != 0 && !isNaN(cache % 1)){
+        const value = cache.toString()
+        const regex = /\d+[.]\d{6,}/
+        regex.test(value) ? ps.innerHTML = cache.toFixed(6) : ps.innerHTML = cache;
+    }else{
+        ps.innerHTML = cache;
+    }
     cache = undefined;
 }
 

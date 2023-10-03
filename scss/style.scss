@@ -1,54 +1,74 @@
 @import "./mixin";
 
-body{
+body {
     @include display(flex, center, center, null, null);
     @include size(100vw, 100vh);
 
     background: #d6b10e;
 }
 
-.calculator{
+.calculator {
     @include size(350px, 530px);
     @include border(null, 15px, null, null, null, null);
 
-    -webkit-box-shadow: 
-    5px 5px 0px 0px #a1a1a3, 
-    10px 10px 0px 0px #a1a1a3, 
-    15px 15px 0px 0px #a1a1a3, 
-    20px 20px 0px 0px #a1a1a3;
+    box-shadow:
+        5px 5px 0px 0px #828285,
+        10px 10px 0px 0px #828285,
+        15px 15px 0px 0px #828285,
+        20px 20px 0px 0px #828285,
+        25px 25px 50px 0px #1b1b1b09,
+        30px 30px 50px 0px #1b1b1b09,
+        40px 40px 50px 0px #1b1b1b09,
+        45px 45px 50px 0px #1b1b1b09,
+        50px 50px 50px 0px #1b1b1b09,
+        55px 55px 50px 0px #1b1b1b09,
+        60px 60px 50px 0px #1b1b1b09,
+        65px 65px 50px 0px #1b1b1b09,
+        70px 70px 50px 0px #1b1b1b09,
+        75px 75px 50px 0px #1b1b1b09,
+        80px 80px 50px 0px #1b1b1b09,
+        85px 85px 50px 0px #1b1b1b09,
+        90px 90px 50px 0px #1b1b1b09,
+        95px 95px 50px 0px #1b1b1b09,
+        100px 100px 50px 0px #1b1b1b09,
+        105px 105px 50px 0px #1b1b1b09,
+        110px 110px 50px 0px #1b1b1b09,
+        115px 115px 50px 0px #1b1b1b09,
+        120px 120px 50px 0px #1b1b1b09,
+        125px 125px 50px 0px #1b1b1b09,
+        130px 130px 50px 0px #1b1b1b09,
+        135px 135px 50px 0px #1b1b1b09,
+        140px 140px 50px 0px #1b1b1b09,
+        145px 145px 50px 0px #1b1b1b09,
+        150px 150px 50px 0px #1b1b1b09,
+        155px 155px 50px 0px #1b1b1b09,
+        160px 160px 50px 0px #1b1b1b09;
 
-    box-shadow: 
-    5px 5px 0px 0px #a1a1a3, 
-    10px 10px 0px 0px #a1a1a3, 
-    15px 15px 0px 0px #a1a1a3, 
-    20px 20px 0px 0px #a1a1a3;
-    
-    &__screen{
+    &__screen {
         @include display(flex, center, center, null, null);
         @include size(100%, 33%);
         @include border(null, null, 15px, 15px, null, null);
-        display: grid;
 
         background: #24252a;
 
-        & .screen{
+        & .screen {
             @include display(flex, center, center, column, null);
             @include size(300px, 100px);
             @include alignment(20px 0 0 0, null);
 
-            background: rgb(54,59,65);
-            background: linear-gradient(135deg, rgba(54,59,65,1) 50%, rgba(52,57,63,1) 50%);
+            background: rgb(54, 59, 65);
+            background: linear-gradient(135deg, rgba(54, 59, 65, 1) 50%, rgba(52, 57, 63, 1) 50%);
             text-align: right;
 
-            #secondary-screen{
+            #secondary-screen {
                 @include display(flex, flex-end, center, null, null);
                 @include size(95%, 30px);
                 @include font(null, 25px, 400, gray, null);
 
                 overflow: hidden;
             }
-    
-            #primary-screen{
+
+            #primary-screen {
                 @include display(flex, flex-end, center, null, null);
                 @include size(95%, 50px);
                 @include font(null, 35px, 400, white, null);
@@ -58,14 +78,14 @@ body{
         }
     }
 
-    &__buttons{
+    &__buttons {
         @include display(flex, center, center, column, null);
         @include size(100%, 67%);
         @include border(null, null, null, null, 15px, 15px);
 
         background-color: #c3c1c4;
 
-        & button{
+        & button {
             @include size(65px, 60px);
             @include alignment(4px 5px, null);
             @include border(none, 10px, null, null, null, null);
@@ -75,21 +95,23 @@ body{
             box-shadow: 2px 2px 0px 1px #6b6b6b;
             background: #a1a1a3;
 
-            &:active{
-                box-shadow: 0 0 0 0 #6b6b6b, inset 3px 3px 0 #6b6b6b;
-                transform: translate(5px, 5px)
+            &:active {
+                box-shadow:
+                    0 0 0 0 #6b6b6b,
+                    inset 3px 3px 0 #6b6b6b;
+                transform: translate(5px, 5px);
             }
         }
 
-        & .operators{
+        & .operators {
             background: #24272c;
         }
 
-        & .equal{
+        & .equal {
             background: #8f1a20;
         }
 
-        & .zero{
+        & .zero {
             @include size(145px, 60px);
         }
     }

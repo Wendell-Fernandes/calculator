@@ -11,7 +11,7 @@ body {
   width: 350px;
   height: 530px;
   border-radius: 15px;
-  box-shadow: 5px 5px 0px 0px #a1a1a3, 10px 10px 0px 0px #a1a1a3, 15px 15px 0px 0px #a1a1a3, 20px 20px 0px 0px #a1a1a3;
+  box-shadow: 5px 5px 0px 0px #828285, 10px 10px 0px 0px #828285, 15px 15px 0px 0px #828285, 20px 20px 0px 0px #828285, 25px 25px 50px 0px rgba(27, 27, 27, 0.0352941176), 30px 30px 50px 0px rgba(27, 27, 27, 0.0352941176), 40px 40px 50px 0px rgba(27, 27, 27, 0.0352941176), 45px 45px 50px 0px rgba(27, 27, 27, 0.0352941176), 50px 50px 50px 0px rgba(27, 27, 27, 0.0352941176), 55px 55px 50px 0px rgba(27, 27, 27, 0.0352941176), 60px 60px 50px 0px rgba(27, 27, 27, 0.0352941176), 65px 65px 50px 0px rgba(27, 27, 27, 0.0352941176), 70px 70px 50px 0px rgba(27, 27, 27, 0.0352941176), 75px 75px 50px 0px rgba(27, 27, 27, 0.0352941176), 80px 80px 50px 0px rgba(27, 27, 27, 0.0352941176), 85px 85px 50px 0px rgba(27, 27, 27, 0.0352941176), 90px 90px 50px 0px rgba(27, 27, 27, 0.0352941176), 95px 95px 50px 0px rgba(27, 27, 27, 0.0352941176), 100px 100px 50px 0px rgba(27, 27, 27, 0.0352941176), 105px 105px 50px 0px rgba(27, 27, 27, 0.0352941176), 110px 110px 50px 0px rgba(27, 27, 27, 0.0352941176), 115px 115px 50px 0px rgba(27, 27, 27, 0.0352941176), 120px 120px 50px 0px rgba(27, 27, 27, 0.0352941176), 125px 125px 50px 0px rgba(27, 27, 27, 0.0352941176), 130px 130px 50px 0px rgba(27, 27, 27, 0.0352941176), 135px 135px 50px 0px rgba(27, 27, 27, 0.0352941176), 140px 140px 50px 0px rgba(27, 27, 27, 0.0352941176), 145px 145px 50px 0px rgba(27, 27, 27, 0.0352941176), 150px 150px 50px 0px rgba(27, 27, 27, 0.0352941176), 155px 155px 50px 0px rgba(27, 27, 27, 0.0352941176), 160px 160px 50px 0px rgba(27, 27, 27, 0.0352941176);
 }
 .calculator__screen {
   display: flex;
@@ -21,7 +21,6 @@ body {
   height: 33%;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  display: grid;
   background: #24252a;
 }
 .calculator__screen .screen {
